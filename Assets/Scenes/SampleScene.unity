@@ -1115,7 +1115,7 @@ MonoBehaviour:
   moveSpeed: 4
   jumpSpeed: 250
   jumpFreq: 0.1
-  nextjumpTime: 0
+  nextJumpTime: 0
   isGrounded: 1
   groundCheckPos: {fileID: 1240937605}
   groundCheckRad: 0.1

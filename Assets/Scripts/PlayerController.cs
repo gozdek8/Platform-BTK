@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     void OnGroundCheck()
     {   //does collider of child object of player touch the layer ground
         isGrounded = Physics2D.OverlapCircle(groundCheckPos.position,groundCheckRad,groundCheckLay);
+        playerAnimator.SetBool("isGroundedAnim",isGrounded);
     }
     
 }
