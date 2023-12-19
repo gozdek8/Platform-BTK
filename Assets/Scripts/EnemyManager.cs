@@ -30,6 +30,13 @@ public class EnemyManager : MonoBehaviour
             inCollider = true;
             other.GetComponent<PlayerManager>().getDamage(damage);
         } 
+        
+        else if (other.tag == "Bullet")
+        {
+            getDamage(other.GetComponent<BulletManager>().bulletDamage);
+            Destroy(other.gameObject);
+        } 
+        
     }
 
     public void OnTriggerExit2D(Collider2D other)
@@ -40,4 +47,26 @@ public class EnemyManager : MonoBehaviour
         }
         
     }
+    
+    public void getDamage(float damage)
+    {
+        if ((health - damage) >= 0)
+        {
+            health = health - damage;
+        }
+        else
+        {
+            health = 0;
+        }
+        isDead();   // every damage check if it is dead
+    }
+    
+    void isDead()
+    {
+        if (health <= 0)
+        {
+          Destroy(gameObject);
+        }
+    }
+    
 }
