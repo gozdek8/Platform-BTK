@@ -2,19 +2,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EnemyManager : MonoBehaviour
 {
 
     public float damage;
     public float health;
+
+    public Slider slider;
     
     public bool inCollider = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        slider.maxValue = health;
+        slider.value = health;
     }
 
     // Update is called once per frame
@@ -52,12 +55,13 @@ public class EnemyManager : MonoBehaviour
     {
         if ((health - damage) >= 0)
         {
-            health = health - damage;
+            health -= damage;
         }
         else
         {
             health = 0;
         }
+        slider.value = health;
         isDead();   // every damage check if it is dead
     }
     

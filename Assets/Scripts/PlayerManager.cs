@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
 
     public float health;
     public bool dead = false;
+
+    public Transform floatingText;
+    public Slider slider;
 
     Transform muzzle;
     public Transform bullet;
@@ -17,6 +21,8 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         muzzle = transform.GetChild(1);
+        slider.maxValue = health;
+        slider.value = health;
     }
 
     // Update is called once per frame
@@ -30,6 +36,7 @@ public class PlayerManager : MonoBehaviour
 
     public void getDamage(float damage)
     {
+        Instantiate(floatingText,transform.position,Quaternion.identity).GetComponent<TextMesh>().text = damage.ToString();
         if ((health - damage) >= 0)
         {
             health = health - damage;
@@ -38,6 +45,7 @@ public class PlayerManager : MonoBehaviour
         {
             health = 0;
         }
+        slider.value = health;
         isDead();   // every damage check if it is dead
     }
 
