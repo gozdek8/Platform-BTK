@@ -68,7 +68,8 @@ public class EnemyManager : MonoBehaviour
     void isDead()
     {
         if (health <= 0)
-        {
+        { 
+          DataManager.Instance.EnemyKilled++;
           Destroy(gameObject);
         }
     }

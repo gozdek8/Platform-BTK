@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
-
     public float health;
     public bool dead = false;
 
+    //GUI
     public Transform floatingText;
     public Slider slider;
+    private bool mouseIsNotOverUI;
 
     Transform muzzle;
     public Transform bullet;
@@ -28,7 +30,8 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) //index 0 -> left click
+        mouseIsNotOverUI = EventSystem.current.currentSelectedGameObject == null; //if UI is not used
+        if (Input.GetMouseButtonDown(0) && mouseIsNotOverUI) //index 0 -> left click
         {
             ShootBullet();
         }
