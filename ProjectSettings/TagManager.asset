@@ -7,6 +7,11 @@ TagManager:
   - Ground
   - Enemy
   - Bullet
+  - Coin
+  - DifficultCoin
+  - Ice
+  - EnemyUpDown
+  - Obstacle
   layers:
   - Default
   - TransparentFX

@@ -38,7 +38,12 @@ public class EnemyManager : MonoBehaviour
         {
             getDamage(other.GetComponent<BulletManager>().bulletDamage);
             Destroy(other.gameObject);
-        } 
+        }
+
+        if (gameObject.tag == "EnemyUpDown" && other.gameObject.tag == "Player")
+        {
+            other.GetComponent<PlayerManager>().getDamage(damage);
+        }
         
     }
 
