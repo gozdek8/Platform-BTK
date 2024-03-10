@@ -26,7 +26,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-268574957568724867
+--- !u!1102 &-6453124045969859772
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -34,7 +34,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: EnemyRobot1
-  m_Speed: 1
+  m_Speed: 0.0001
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -74,7 +74,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &3308753909762385357
+--- !u!1102 &3259894539698442574
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -140,13 +140,13 @@ AnimatorStateMachine:
     m_Position: {x: 250, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7029063483139146222}
-    m_Position: {x: 235, y: 65, z: 0}
+    m_Position: {x: 200, y: 250, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -268574957568724867}
-    m_Position: {x: 270, y: 130, z: 0}
+    m_State: {fileID: -6453124045969859772}
+    m_Position: {x: 235, y: 315, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 3308753909762385357}
-    m_Position: {x: 305, y: 195, z: 0}
+    m_State: {fileID: 3259894539698442574}
+    m_Position: {x: 270, y: 380, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
