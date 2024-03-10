@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
 {
     public float health;
     public bool dead = false;
+    public Transform bloodParticle;
 
     //GUI
     public Transform floatingText;
@@ -56,7 +57,9 @@ public class PlayerManager : MonoBehaviour
     {
         if (health <= 0)
         {
+            Destroy(Instantiate(bloodParticle, transform.position, Quaternion.identity),3f);
             dead = true;
+            Destroy(gameObject);
         }
     }
 

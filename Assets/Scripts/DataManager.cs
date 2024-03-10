@@ -10,6 +10,8 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
 
+    public Animator chestAnimation;
+
     //for score board ...
     /*
      private int shotBullet;

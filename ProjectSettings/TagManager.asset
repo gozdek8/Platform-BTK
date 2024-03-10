@@ -12,6 +12,7 @@ TagManager:
   - Ice
   - EnemyUpDown
   - Obstacle
+  - Jump
   layers:
   - Default
   - TransparentFX

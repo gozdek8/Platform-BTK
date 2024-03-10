@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Collider jumpGroundColl;
+    
     private Rigidbody2D playerRB;
     
     public float moveSpeed = 1f;
