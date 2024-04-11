@@ -10,6 +10,7 @@ public class ChestManager : MonoBehaviour
 
     public GameObject chest;
     private bool isEnough = false;
+    public AudioSource audioClip;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,6 +27,7 @@ public class ChestManager : MonoBehaviour
         if (DataManager.Instance.CoinsCollected == 45)
         {
             GetComponent<Animator>().SetBool("isEnough",true);
+            audioClip.Play();
             SceneManager.LoadScene(2);
         }
         else

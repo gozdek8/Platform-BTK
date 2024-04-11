@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+    [SerializeField] AudioClip coinAudio;
+    
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -21,7 +21,7 @@ public class CoinManager : MonoBehaviour
                 DataManager.Instance.CoinsCollected++;
                 Destroy(gameObject);
             }
-            
+            gameObject.GetComponent<AudioSource>().Play(); 
         } 
     } 
     

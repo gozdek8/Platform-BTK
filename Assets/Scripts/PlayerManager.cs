@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
@@ -60,6 +61,9 @@ public class PlayerManager : MonoBehaviour
             Destroy(Instantiate(bloodParticle, transform.position, Quaternion.identity),3f);
             dead = true;
             Destroy(gameObject);
+            DataManager.Instance.CoinsCollected = 0;
+            DataManager.Instance.EnemyKilled = 0;
+            SceneManager.LoadScene("GameScene");
         }
     }
 

@@ -10,6 +10,7 @@ public class LevelRestart : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            DataManager.Instance.CoinsCollected = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

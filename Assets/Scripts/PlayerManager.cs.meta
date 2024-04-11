@@ -3,7 +3,11 @@ guid: b766af9688094764f8585bfe5747297c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bloodParticle: {fileID: 7208193519286217530, guid: 8c30e0460916c1540878ff770ad8094b, type: 3}
+  - floatingText: {fileID: 223694838597274399, guid: 04b697f84c63c7b4dbea91b57e4b1959, type: 3}
+  - slider: {fileID: 3965274954386974120, guid: 0a0007d721a0ace459de8c6f3cc98049, type: 3}
+  - bullet: {fileID: 3967751965940120756, guid: 01972be07e2012c4fb9a1a29012f83fa, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
