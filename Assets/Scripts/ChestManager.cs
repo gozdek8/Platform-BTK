@@ -24,7 +24,7 @@ public class ChestManager : MonoBehaviour
 
     void OpenChest()
     {
-        if (DataManager.Instance.CoinsCollected == 45)
+        if (DataManager.Instance.CoinsCollected == 43)
         {
             GetComponent<Animator>().SetBool("isEnough",true);
             audioClip.Play();
